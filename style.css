@@ -625,8 +625,28 @@ button:hover {
 
 .form {
     background-color: var(--background-section);
-    height: 500px;
+    height: 550px;
     padding-top: 20px;
+    width: 100%;
+}
+
+.logo {
+    font-family: "Odibee Sans", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #486693, #B8273A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+
+}
+
+::selection {
+    background-color: var(--secondary-text-color);
+    color: var(--background-section);
 }
 
 .ey {
@@ -667,21 +687,20 @@ button:hover {
     padding: 5px;
 }
 
-
 .Join {
     color: var(--primary-text-color);
     text-shadow:
-            0 0 10px rgba(0, 0, 0, 0.5),
-            -3px -3px 0 #000,
-            3px -3px 0 #000,
-            -3px 3px 0 #000,
-            3px 3px 0 #000;
+        0 0 10px rgba(0, 0, 0, 0.5),
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000;
 
     font-family: "Odibee Sans", sans-serif;
     font-weight: 300;
     font-size: 50px;
     text-transform: uppercase;
-    
+
     line-height: 100%;
     letter-spacing: 0%;
     display: flex;
@@ -701,11 +720,6 @@ button:hover {
     align-items: center;
     padding: 20px;
     box-shadow: 7px 7px 2px 0px rgb(0, 0, 0, 0.2);
-}
-
-.teh ::selection {
-    background-color: var(--additional);
-    color: var(--secondary-text-color);
 }
 
 .teh p {
@@ -736,6 +750,7 @@ button {
     font-size: 16px;
     text-transform: uppercase;
     box-shadow: 7px 7px 2px 0px rgb(0, 0, 0, 0.2);
+
 }
 
 .but {
@@ -747,7 +762,6 @@ button {
 }
 
 button {
-    margin-top: 30px;
     display: inline-block;
     padding: 16px 50px;
     background-color: var(--button-color);
@@ -756,19 +770,18 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     font-family: "Odibee Sans", sans-serif;
     font-size: 18px;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-    
+
     border: 2px solid var(--secondary-text-color);
     box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
-    
+
     transition: all 0.15s ease;
     cursor: pointer;
-
 }
 
 .button:hover {
@@ -778,11 +791,14 @@ button {
 }
 
 footer {
-    height: 70px;
-    background-color: var(--secondary-text-color);
+    height: 280px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: var(--secondary-text-color);
+    border-bottom: 2px solid black;
+    z-index: 100;
 }
 
 footer h4 {
@@ -800,14 +816,82 @@ input:hover {
     background-color: var(--background);
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
     transform: translate(4px, 4px);
-    transition: all 0.15s ease;
 }
 
 textarea:hover {
     background-color: var(--background);
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
     transform: translate(4px, 4px);
-    transition: all 0.15s ease;
+}
+
+.nav-linkk {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.2s ease;
+    font-family: "Nunito", sans-serif;
+}
+
+.social-link {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-size: 18px;        
+    font-weight: 400;
+    position: relative;
+    transition: color 0.2s ease;
+    font-family: "Nunito", sans-serif;
+}
+
+.navv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navv-linkk:hover {
+    color: var(--background-section);
+}
+
+
+.navv-linkk.active {
+    color: var(--background-section);
+    font-weight: 700;
+}
+
+.navv-linkk.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--background-section);
+    border: 0.5px solid black;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.links2 {
+    gap: 7px;
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.channels {
+    color: var(--primary-text-color);
+    font-family: "Odibee Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 
