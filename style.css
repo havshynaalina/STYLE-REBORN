@@ -435,6 +435,19 @@ body {
     box-shadow: -25px 25px 10px rgba(0, 0, 0, 0.2);
 }
 
+.vi {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vi video {
+    width: 50%;
+    height: 85vh;
+
+    object-fit: cover;
+    display: block;
+}
 
 .timeline-section {
     width: 100%;
@@ -504,6 +517,8 @@ body {
     width: 100%;
     max-width: 760px;
     margin-top: 100px;
+    margin-bottom: 100px;
+    margin-top: 0;
 }
 
 .timeline-content h3 {
