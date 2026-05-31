@@ -386,58 +386,107 @@ body {
     transition: transform 0.3s ease;
 }
 
-.backdrop {
+.card-backdrop {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(84, 86, 87, 0.5);
-    z-index: 100;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+
+    opacity: 1;
+    visibility: visible;
+    transition: .3s;
 }
 
-.backdrop.is-hidden {
+.card-backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 400px;
-    padding: 24px;
-    background-color: var(--section-color);
+.card-modal {
+    width: 900px;
+    max-width: 95vw;
+
+    background: var(--background);
     border: 2px solid var(--secondary-text-color);
-    overflow: hidden;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-    color: rgb(0, 0, 0);
+    padding: 30px;
+    position: relative;
+    box-shadow: 15px 15px 0 rgba(0, 0, 0, .25);
 }
 
-.modal img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
-
-.btn-close {
+.card-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: var(--green-color);
-    color: var(--white-color);
-    border: none;
-    border-radius: 25px;
+    right: 15px;
+    top: 15px;
     width: 45px;
     height: 45px;
+    padding: 0;
+    margin: 0;
+
     cursor: pointer;
 }
 
-.btn-close:hover {
-    background: var(--light-green-color);
+.card-modal .position {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.card-modal .modal-image {
+    width: 280px;
+    min-width: 280px;
+    height: 380px;
+    overflow: hidden;
+    border: 2px solid var(--secondary-text-color);
+}
+
+.card-modal .modal-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.card-modal .modal-text {
+    flex: 1;
+}
+
+.card-modal .modal-text h2 {
+    font-family: "Odibee Sans", sans-serif;
+    color: var(--additional);
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.card-modal .modal-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+
+    .card-modal .position {
+        flex-direction: column;
+    }
+
+    .card-modal .modal-image {
+        width: 100%;
+        min-width: auto;
+        height: 300px;
+    }
+
+    .card-modal .modal-text h2 {
+        font-size: 36px;
+    }
 }
 
 .position {
@@ -1109,4 +1158,21 @@ textarea:hover {
     .card { flex-direction: column; width: 90%; margin: 60px auto; }
     .card img { width: 100%; height: auto; margin: 0 0 20px 0 !important; }
     .content { width: 100%; padding: 40px; }
+}
+
+.trend-text {
+    max-width: 100%;
+    padding-top: 20px;
+}
+
+.trend-text h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 48px;
+}
+
+.trend-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
